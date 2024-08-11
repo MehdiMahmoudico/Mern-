@@ -18,35 +18,35 @@ class Unit extends Card {
     }
 }
 
-// class Effect extends Card {
-//     constructor(name,cost){
-//         super(name, cost,effect);
-//         this.effect = effect;
-//     }
-//     effect(target){
-//         Unit = target;
-//         power = target.power
-//         res = target.res
-//         if(Effect.name === 'Hard Algorithm'){
-//             Effect.cost -= 2;
-//             target.res += 3;
-//         }
-//         if(Effect.name === 'Unhandled Promise Rejection'){
-//             Effect.cost -= 1;
-//             target.res -= 2;
-//         }
-//         if(Effect.name === 'Pair Programming'){
-//             Effect.cost -= 3;
-//             target.power += 2;
-//         }
-//     }
-// }
+class Effect extends Card {
+    constructor(name,cost){
+        super(name, cost,effect);
+        this.effect = effect;
+    }
+    effect(target){
+        Unit = target;
+        power = target.power
+        res = target.res
+        if(Effect.name === 'Hard Algorithm'){
+            Effect.cost -= 2;
+            target.res += 3;
+        }
+        if(Effect.name === 'Unhandled Promise Rejection'){
+            Effect.cost -= 1;
+            target.res -= 2;
+        }
+        if(Effect.name === 'Pair Programming'){
+            Effect.cost -= 3;
+            target.power += 2;
+        }
+    }
+}
 
 const RedBeltNinja = new Unit("Red Belt Ninja",3,3,4);
 const BlackBeltNinja = new Unit("Black Belt Ninja",4,5,4);
-// const HardAlgorithm = new Effect("Hard Algorithm",2);
-// const UnhandledPromiseRejection = new Effect("Unhandled Promise Rejection",1);
-// const PairProgramming = new Effect("Pair Programming",3);
+const HardAlgorithm = new Effect("Hard Algorithm",2);
+const UnhandledPromiseRejection = new Effect("Unhandled Promise Rejection",1);
+const PairProgramming = new Effect("Pair Programming",3);
 RedBeltNinja.attack(BlackBeltNinja);
 
 
