@@ -9,12 +9,9 @@ function App() {
     <div className="App">
       <Link to='/Home'>Home</Link>
 
-
-
-
       <Routes>
         <Route path="/Home" element={<Home />} />
-        <Route path="/Detail" element={<Detail />} />
+        <Route path="/:numb/:tcolor/:bcolor" element={<Detail />} />
         <Route path="/:numb" element={<Numb />} />
       </Routes>
     </div>
